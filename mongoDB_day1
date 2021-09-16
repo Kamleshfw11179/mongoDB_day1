@@ -1,0 +1,369 @@
+show collections
+> db.createCollection('users')
+{ "ok" : 1 }
+> db.users.inser({{
+...   "first_name": "Simonette",
+...   "last_name": "Medmore",
+...   "email": "smedmore0@time.com",
+...   "gender": "Agender",
+...   "ip_address": "251.129.151.117",
+...   "age": 23
+... }^C
+
+> db.users.insert({
+...   "first_name": "Simonette",
+...   "last_name": "Medmore",
+...   "email": "smedmore0@time.com",
+...   "gender": "Agender",
+...   "ip_address": "251.129.151.117",
+...   "age": 23
+... })
+WriteResult({ "nInserted" : 1 })
+> db.users.insertMany([{
+...   "first_name": "Helen-elizabeth",
+...   "last_name": "Stebles",
+...   "email": "hstebles1@people.com.cn",
+...   "gender": "Polygender",
+...   "ip_address": "243.242.52.165",
+...   "age": 52
+... }, {
+...   "first_name": "Cary",
+...   "last_name": "Frediani",
+...   "email": "cfrediani2@discovery.com",
+...   "gender": "Genderqueer",
+...   "ip_address": "15.80.12.33",
+...   "age": 53
+... }, {
+...   "first_name": "Inigo",
+...   "last_name": "Bauduin",
+...   "email": "ibauduin3@sphinn.com",
+...   "gender": "Female",
+...   "ip_address": "216.122.4.142",
+...   "age": 66
+... }, {
+...   "first_name": "Jena",
+...   "last_name": "Poskitt",
+...   "email": "jposkitt4@edublogs.org",
+...   "gender": "Genderfluid",
+...   "ip_address": "42.80.86.210",
+...   "age": 51
+... }, {
+...   "first_name": "Shirlee",
+...   "last_name": "Hefforde",
+...   "email": "shefforde5@salon.com",
+...   "gender": "Genderfluid",
+...   "ip_address": "148.207.245.205",
+...   "age": 49
+... }, {
+...   "first_name": "Blithe",
+...   "last_name": "Wrassell",
+...   "email": "bwrassell6@pinterest.com",
+...   "gender": "Genderfluid",
+...   "ip_address": "167.92.247.102",
+...   "age": 63
+... }, {
+...   "first_name": "Shina",
+...   "last_name": "Gurner",
+...   "email": "sgurner7@webnode.com",
+...   "gender": "Female",
+...   "ip_address": "14.155.146.29",
+...   "age": 62
+... }, {
+...   "first_name": "Levon",
+...   "last_name": "Ditchburn",
+...   "email": "lditchburn8@hc360.com",
+...   "gender": "Bigender",
+...   "ip_address": "205.84.227.209",
+...   "age": 57
+... }, {
+...   "first_name": "Carmelle",
+...   "last_name": "Druitt",
+...   "email": "cdruitt9@oracle.com",
+...   "gender": "Genderqueer",
+...   "ip_address": "56.67.181.213",
+...   "age": 37
+... }]
+... )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("61439b0466853d2b8838b982"),
+                ObjectId("61439b0466853d2b8838b983"),
+                ObjectId("61439b0466853d2b8838b984"),
+                ObjectId("61439b0466853d2b8838b985"),
+                ObjectId("61439b0466853d2b8838b986"),
+                ObjectId("61439b0466853d2b8838b987"),
+                ObjectId("61439b0466853d2b8838b988"),
+                ObjectId("61439b0466853d2b8838b989"),
+                ObjectId("61439b0466853d2b8838b98a")
+        ]
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("61439acf66853d2b8838b981"),
+        "first_name" : "Simonette",
+        "last_name" : "Medmore",
+        "email" : "smedmore0@time.com",
+        "gender" : "Agender",
+        "ip_address" : "251.129.151.117",
+        "age" : 23
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b982"),
+        "first_name" : "Helen-elizabeth",
+        "last_name" : "Stebles",
+        "email" : "hstebles1@people.com.cn",
+        "gender" : "Polygender",
+        "ip_address" : "243.242.52.165",
+        "age" : 52
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b983"),
+        "first_name" : "Cary",
+        "last_name" : "Frediani",
+        "email" : "cfrediani2@discovery.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "15.80.12.33",
+        "age" : 53
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b984"),
+        "first_name" : "Inigo",
+        "last_name" : "Bauduin",
+        "email" : "ibauduin3@sphinn.com",
+        "gender" : "Female",
+        "ip_address" : "216.122.4.142",
+        "age" : 66
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b985"),
+        "first_name" : "Jena",
+        "last_name" : "Poskitt",
+        "email" : "jposkitt4@edublogs.org",
+        "gender" : "Genderfluid",
+        "ip_address" : "42.80.86.210",
+        "age" : 51
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b986"),
+        "first_name" : "Shirlee",
+        "last_name" : "Hefforde",
+        "email" : "shefforde5@salon.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "148.207.245.205",
+        "age" : 49
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b987"),
+        "first_name" : "Blithe",
+        "last_name" : "Wrassell",
+        "email" : "bwrassell6@pinterest.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "167.92.247.102",
+        "age" : 63
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b988"),
+        "first_name" : "Shina",
+        "last_name" : "Gurner",
+        "email" : "sgurner7@webnode.com",
+        "gender" : "Female",
+        "ip_address" : "14.155.146.29",
+        "age" : 62
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b989"),
+        "first_name" : "Levon",
+        "last_name" : "Ditchburn",
+        "email" : "lditchburn8@hc360.com",
+        "gender" : "Bigender",
+        "ip_address" : "205.84.227.209",
+        "age" : 57
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b98a"),
+        "first_name" : "Carmelle",
+        "last_name" : "Druitt",
+        "email" : "cdruitt9@oracle.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "56.67.181.213",
+        "age" : 37
+}
+> db.users.findOne({ "_id" : ObjectId("61439b0466853d2b8838b98a")})
+{
+        "_id" : ObjectId("61439b0466853d2b8838b98a"),
+        "first_name" : "Carmelle",
+        "last_name" : "Druitt",
+        "email" : "cdruitt9@oracle.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "56.67.181.213",
+        "age" : 37
+}
+> db.users.update({"_id" : ObjectId("61439b0466853d2b8838b98a")},{$set:{gender:"female"})
+... ^C
+
+> ^C
+bye
+
+Kamlesh@DESKTOP-RJM7817 MINGW64 ~
+$ mongo
+MongoDB shell version v4.2.8
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("fab8e90b-9a60-4a9f-9588-8fc931e500c4") }
+MongoDB server version: 4.2.8
+Server has startup warnings:
+2021-09-17T00:29:39.942+0530 I  CONTROL  [initandlisten]
+2021-09-17T00:29:39.943+0530 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2021-09-17T00:29:39.944+0530 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2021-09-17T00:29:39.945+0530 I  CONTROL  [initandlisten]
+2021-09-17T00:29:39.946+0530 I  CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2021-09-17T00:29:39.946+0530 I  CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2021-09-17T00:29:39.947+0530 I  CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP
+2021-09-17T00:29:39.947+0530 I  CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2021-09-17T00:29:39.948+0530 I  CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2021-09-17T00:29:39.948+0530 I  CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2021-09-17T00:29:39.966+0530 I  CONTROL  [initandlisten]
+---
+Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+and anyone you share the URL with. MongoDB may use this information to make product
+improvements and to suggest MongoDB products and deployment options to you.
+
+To enable free monitoring, run the following command: db.enableFreeMonitoring()
+To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+
+> use users
+switched to db users
+> db.users.update({"_id" : ObjectId("61439b0466853d2b8838b98a")},{$set:{gender:"female"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("61439acf66853d2b8838b981"), "first_name" : "Simonette", "last_name" : "Medmore", "email" : "smedmore0@time.com", "gender" : "Agender", "ip_address" : "251.129.151.117", "age" : 23 }
+{ "_id" : ObjectId("61439b0466853d2b8838b982"), "first_name" : "Helen-elizabeth", "last_name" : "Stebles", "email" : "hstebles1@people.com.cn", "gender" : "Polygender", "ip_address" : "243.242.52.165", "age" : 52 }        
+{ "_id" : ObjectId("61439b0466853d2b8838b983"), "first_name" : "Cary", "last_name" : "Frediani", "email" : "cfrediani2@discovery.com", "gender" : "Genderqueer", "ip_address" : "15.80.12.33", "age" : 53 }
+{ "_id" : ObjectId("61439b0466853d2b8838b984"), "first_name" : "Inigo", "last_name" : "Bauduin", "email" : "ibauduin3@sphinn.com", "gender" : "Female", "ip_address" : "216.122.4.142", "age" : 66 }
+{ "_id" : ObjectId("61439b0466853d2b8838b985"), "first_name" : "Jena", "last_name" : "Poskitt", "email" : "jposkitt4@edublogs.org", "gender" : "Genderfluid", "ip_address" : "42.80.86.210", "age" : 51 }
+{ "_id" : ObjectId("61439b0466853d2b8838b986"), "first_name" : "Shirlee", "last_name" : "Hefforde", "email" : "shefforde5@salon.com", "gender" : "Genderfluid", "ip_address" : "148.207.245.205", "age" : 49 }
+{ "_id" : ObjectId("61439b0466853d2b8838b987"), "first_name" : "Blithe", "last_name" : "Wrassell", "email" : "bwrassell6@pinterest.com", "gender" : "Genderfluid", "ip_address" : "167.92.247.102", "age" : 63 }
+{ "_id" : ObjectId("61439b0466853d2b8838b988"), "first_name" : "Shina", "last_name" : "Gurner", "email" : "sgurner7@webnode.com", "gender" : "Female", "ip_address" : "14.155.146.29", "age" : 62 }
+{ "_id" : ObjectId("61439b0466853d2b8838b989"), "first_name" : "Levon", "last_name" : "Ditchburn", "email" : "lditchburn8@hc360.com", "gender" : "Bigender", "ip_address" : "205.84.227.209", "age" : 57 }
+{ "_id" : ObjectId("61439b0466853d2b8838b98a"), "first_name" : "Carmelle", "last_name" : "Druitt", "email" : "cdruitt9@oracle.com", "gender" : "female", "ip_address" : "56.67.181.213", "age" : 37 }
+> db.users.updateMany({{ "_id" : ObjectId("61439acf66853d2b8838b981")},{$set:{gender:"male"}},{ "_id" : ObjectId("61439b0466853d2b8838b982")},{$set:{gender:"male"}})
+... ^C
+
+> db.users.updateMany({ "_id" : ObjectId("61439acf66853d2b8838b981")},{$set:{gender:"male"}},{ "_id" : ObjectId("61439b0466853d2b8838b982")},{$set:{gender:"male"}}) 
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.users.find()
+{ "_id" : ObjectId("61439acf66853d2b8838b981"), "first_name" : "Simonette", "last_name" : "Medmore", "email" : "smedmore0@time.com", "gender" : "male", "ip_address" : "251.129.151.117", "age" : 23 }
+{ "_id" : ObjectId("61439b0466853d2b8838b982"), "first_name" : "Helen-elizabeth", "last_name" : "Stebles", "email" : "hstebles1@people.com.cn", "gender" : "Polygender", "ip_address" : "243.242.52.165", "age" : 52 }        
+{ "_id" : ObjectId("61439b0466853d2b8838b983"), "first_name" : "Cary", "last_name" : "Frediani", "email" : "cfrediani2@discovery.com", "gender" : "Genderqueer", "ip_address" : "15.80.12.33", "age" : 53 }
+{ "_id" : ObjectId("61439b0466853d2b8838b984"), "first_name" : "Inigo", "last_name" : "Bauduin", "email" : "ibauduin3@sphinn.com", "gender" : "Female", "ip_address" : "216.122.4.142", "age" : 66 }
+{ "_id" : ObjectId("61439b0466853d2b8838b985"), "first_name" : "Jena", "last_name" : "Poskitt", "email" : "jposkitt4@edublogs.org", "gender" : "Genderfluid", "ip_address" : "42.80.86.210", "age" : 51 }
+{ "_id" : ObjectId("61439b0466853d2b8838b986"), "first_name" : "Shirlee", "last_name" : "Hefforde", "email" : "shefforde5@salon.com", "gender" : "Genderfluid", "ip_address" : "148.207.245.205", "age" : 49 }
+{ "_id" : ObjectId("61439b0466853d2b8838b987"), "first_name" : "Blithe", "last_name" : "Wrassell", "email" : "bwrassell6@pinterest.com", "gender" : "Genderfluid", "ip_address" : "167.92.247.102", "age" : 63 }
+{ "_id" : ObjectId("61439b0466853d2b8838b988"), "first_name" : "Shina", "last_name" : "Gurner", "email" : "sgurner7@webnode.com", "gender" : "Female", "ip_address" : "14.155.146.29", "age" : 62 }
+{ "_id" : ObjectId("61439b0466853d2b8838b989"), "first_name" : "Levon", "last_name" : "Ditchburn", "email" : "lditchburn8@hc360.com", "gender" : "Bigender", "ip_address" : "205.84.227.209", "age" : 57 }
+{ "_id" : ObjectId("61439b0466853d2b8838b98a"), "first_name" : "Carmelle", "last_name" : "Druitt", "email" : "cdruitt9@oracle.com", "gender" : "female", "ip_address" : "56.67.181.213", "age" : 37 }
+> db.users.updateMany({gender:"female"})
+2021-09-17T01:05:59.826+0530 E  QUERY    [js] uncaught exception: TypeError: can't convert undefined to object :
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:648:20
+@(shell):1:1
+> db.users.find()
+{ "_id" : ObjectId("61439acf66853d2b8838b981"), "first_name" : "Simonette", "last_name" : "Medmore", "email" : "smedmore0@time.com", "gender" : "male", "ip_address" : "251.129.151.117", "age" : 23 }
+{ "_id" : ObjectId("61439b0466853d2b8838b982"), "first_name" : "Helen-elizabeth", "last_name" : "Stebles", "email" : "hstebles1@people.com.cn", "gender" : "Polygender", "ip_address" : "243.242.52.165", "age" : 52 }        
+{ "_id" : ObjectId("61439b0466853d2b8838b983"), "first_name" : "Cary", "last_name" : "Frediani", "email" : "cfrediani2@discovery.com", "gender" : "Genderqueer", "ip_address" : "15.80.12.33", "age" : 53 }
+{ "_id" : ObjectId("61439b0466853d2b8838b984"), "first_name" : "Inigo", "last_name" : "Bauduin", "email" : "ibauduin3@sphinn.com", "gender" : "Female", "ip_address" : "216.122.4.142", "age" : 66 }
+{ "_id" : ObjectId("61439b0466853d2b8838b985"), "first_name" : "Jena", "last_name" : "Poskitt", "email" : "jposkitt4@edublogs.org", "gender" : "Genderfluid", "ip_address" : "42.80.86.210", "age" : 51 }
+{ "_id" : ObjectId("61439b0466853d2b8838b986"), "first_name" : "Shirlee", "last_name" : "Hefforde", "email" : "shefforde5@salon.com", "gender" : "Genderfluid", "ip_address" : "148.207.245.205", "age" : 49 }
+{ "_id" : ObjectId("61439b0466853d2b8838b987"), "first_name" : "Blithe", "last_name" : "Wrassell", "email" : "bwrassell6@pinterest.com", "gender" : "Genderfluid", "ip_address" : "167.92.247.102", "age" : 63 }
+{ "_id" : ObjectId("61439b0466853d2b8838b988"), "first_name" : "Shina", "last_name" : "Gurner", "email" : "sgurner7@webnode.com", "gender" : "Female", "ip_address" : "14.155.146.29", "age" : 62 }
+{ "_id" : ObjectId("61439b0466853d2b8838b989"), "first_name" : "Levon", "last_name" : "Ditchburn", "email" : "lditchburn8@hc360.com", "gender" : "Bigender", "ip_address" : "205.84.227.209", "age" : 57 }
+{ "_id" : ObjectId("61439b0466853d2b8838b98a"), "first_name" : "Carmelle", "last_name" : "Druitt", "email" : "cdruitt9@oracle.com", "gender" : "female", "ip_address" : "56.67.181.213", "age" : 37 }
+> db.users.updateMany({gender:"Female"},{$set:{gender:"female"}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.users.find()
+{ "_id" : ObjectId("61439acf66853d2b8838b981"), "first_name" : "Simonette", "last_name" : "Medmore", "email" : "smedmore0@time.com", "gender" : "male", "ip_address" : "251.129.151.117", "age" : 23 }
+{ "_id" : ObjectId("61439b0466853d2b8838b982"), "first_name" : "Helen-elizabeth", "last_name" : "Stebles", "email" : "hstebles1@people.com.cn", "gender" : "Polygender", "ip_address" : "243.242.52.165", "age" : 52 }        
+{ "_id" : ObjectId("61439b0466853d2b8838b983"), "first_name" : "Cary", "last_name" : "Frediani", "email" : "cfrediani2@discovery.com", "gender" : "Genderqueer", "ip_address" : "15.80.12.33", "age" : 53 }
+{ "_id" : ObjectId("61439b0466853d2b8838b984"), "first_name" : "Inigo", "last_name" : "Bauduin", "email" : "ibauduin3@sphinn.com", "gender" : "female", "ip_address" : "216.122.4.142", "age" : 66 }
+{ "_id" : ObjectId("61439b0466853d2b8838b985"), "first_name" : "Jena", "last_name" : "Poskitt", "email" : "jposkitt4@edublogs.org", "gender" : "Genderfluid", "ip_address" : "42.80.86.210", "age" : 51 }
+{ "_id" : ObjectId("61439b0466853d2b8838b986"), "first_name" : "Shirlee", "last_name" : "Hefforde", "email" : "shefforde5@salon.com", "gender" : "Genderfluid", "ip_address" : "148.207.245.205", "age" : 49 }
+{ "_id" : ObjectId("61439b0466853d2b8838b987"), "first_name" : "Blithe", "last_name" : "Wrassell", "email" : "bwrassell6@pinterest.com", "gender" : "Genderfluid", "ip_address" : "167.92.247.102", "age" : 63 }
+{ "_id" : ObjectId("61439b0466853d2b8838b988"), "first_name" : "Shina", "last_name" : "Gurner", "email" : "sgurner7@webnode.com", "gender" : "female", "ip_address" : "14.155.146.29", "age" : 62 }
+{ "_id" : ObjectId("61439b0466853d2b8838b989"), "first_name" : "Levon", "last_name" : "Ditchburn", "email" : "lditchburn8@hc360.com", "gender" : "Bigender", "ip_address" : "205.84.227.209", "age" : 57 }
+{ "_id" : ObjectId("61439b0466853d2b8838b98a"), "first_name" : "Carmelle", "last_name" : "Druitt", "email" : "cdruitt9@oracle.com", "gender" : "female", "ip_address" : "56.67.181.213", "age" : 37 }
+> db.users.deleteOne({ "_id" : ObjectId("61439acf66853d2b8838b981")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.deleteMany({ "_id" : ObjectId("61439b0466853d2b8838b982")},{ "_id" : ObjectId("61439b0466853d2b8838b983")})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.find()
+{ "_id" : ObjectId("61439b0466853d2b8838b983"), "first_name" : "Cary", "last_name" : "Frediani", "email" : "cfrediani2@discovery.com", "gender" : "Genderqueer", "ip_address" : "15.80.12.33", "age" : 53 }
+{ "_id" : ObjectId("61439b0466853d2b8838b984"), "first_name" : "Inigo", "last_name" : "Bauduin", "email" : "ibauduin3@sphinn.com", "gender" : "female", "ip_address" : "216.122.4.142", "age" : 66 }
+{ "_id" : ObjectId("61439b0466853d2b8838b985"), "first_name" : "Jena", "last_name" : "Poskitt", "email" : "jposkitt4@edublogs.org", "gender" : "Genderfluid", "ip_address" : "42.80.86.210", "age" : 51 }
+{ "_id" : ObjectId("61439b0466853d2b8838b986"), "first_name" : "Shirlee", "last_name" : "Hefforde", "email" : "shefforde5@salon.com", "gender" : "Genderfluid", "ip_address" : "148.207.245.205", "age" : 49 }
+{ "_id" : ObjectId("61439b0466853d2b8838b987"), "first_name" : "Blithe", "last_name" : "Wrassell", "email" : "bwrassell6@pinterest.com", "gender" : "Genderfluid", "ip_address" : "167.92.247.102", "age" : 63 }
+{ "_id" : ObjectId("61439b0466853d2b8838b988"), "first_name" : "Shina", "last_name" : "Gurner", "email" : "sgurner7@webnode.com", "gender" : "female", "ip_address" : "14.155.146.29", "age" : 62 }
+{ "_id" : ObjectId("61439b0466853d2b8838b989"), "first_name" : "Levon", "last_name" : "Ditchburn", "email" : "lditchburn8@hc360.com", "gender" : "Bigender", "ip_address" : "205.84.227.209", "age" : 57 }
+{ "_id" : ObjectId("61439b0466853d2b8838b98a"), "first_name" : "Carmelle", "last_name" : "Druitt", "email" : "cdruitt9@oracle.com", "gender" : "female", "ip_address" : "56.67.181.213", "age" : 37 }
+> db.users.deleteMany({gender:"female"})
+{ "acknowledged" : true, "deletedCount" : 3 }
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("61439b0466853d2b8838b983"),
+        "first_name" : "Cary",
+        "last_name" : "Frediani",
+        "email" : "cfrediani2@discovery.com",
+        "gender" : "Genderqueer",
+        "ip_address" : "15.80.12.33",
+        "age" : 53
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b985"),
+        "first_name" : "Jena",
+        "last_name" : "Poskitt",
+        "email" : "jposkitt4@edublogs.org",
+        "gender" : "Genderfluid",
+        "ip_address" : "42.80.86.210",
+        "age" : 51
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b986"),
+        "first_name" : "Shirlee",
+        "last_name" : "Hefforde",
+        "email" : "shefforde5@salon.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "148.207.245.205",
+        "age" : 49
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b987"),
+        "first_name" : "Blithe",
+        "last_name" : "Wrassell",
+        "email" : "bwrassell6@pinterest.com",
+        "gender" : "Genderfluid",
+        "ip_address" : "167.92.247.102",
+        "age" : 63
+}
+{
+        "_id" : ObjectId("61439b0466853d2b8838b989"),
+        "first_name" : "Levon",
+        "last_name" : "Ditchburn",
+        "email" : "lditchburn8@hc360.com",
+        "gender" : "Bigender",
+        "ip_address" : "205.84.227.209",
+        "age" : 57
+}
+> db.users.remove({"first_name" : "Levon"})
+WriteResult({ "nRemoved" : 1 })
+> db.users.find()
+{ "_id" : ObjectId("61439b0466853d2b8838b983"), "first_name" : "Cary", "last_name" : "Frediani", "email" : "cfrediani2@discovery.com", "gender" : "Genderqueer", "ip_address" : "15.80.12.33", "age" : 53 }
+{ "_id" : ObjectId("61439b0466853d2b8838b985"), "first_name" : "Jena", "last_name" : "Poskitt", "email" : "jposkitt4@edublogs.org", "gender" : "Genderfluid", "ip_address" : "42.80.86.210", "age" : 51 }
+{ "_id" : ObjectId("61439b0466853d2b8838b986"), "first_name" : "Shirlee", "last_name" : "Hefforde", "email" : "shefforde5@salon.com", "gender" : "Genderfluid", "ip_address" : "148.207.245.205", "age" : 49 }
+{ "_id" : ObjectId("61439b0466853d2b8838b987"), "first_name" : "Blithe", "last_name" : "Wrassell", "email" : "bwrassell6@pinterest.com", "gender" : "Genderfluid", "ip_address" : "167.92.247.102", "age" : 63 }
+> db.users.drop()
+true
+> db.dropDatabase()
+{ "dropped" : "users", "ok" : 1 }
+> 
